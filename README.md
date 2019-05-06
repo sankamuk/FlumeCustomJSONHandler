@@ -1,5 +1,5 @@
 
-### Secure Flume JSONHandler for HTTPSource
+# Secure Flume JSONHandler for HTTPSource
 
 This repository is the code base for the blog
 
@@ -7,11 +7,12 @@ https://mukherjeesankar.wordpress.com/2019/05/06/how-to-flume-secure-and-ha/
 
 Here we create a code for custom JSONHandler for HTTPSource which accepts an token in header with name ***"auth"*** and validates if it matches with configuration value with name ***"authtoken"***.
 
-# Installation and Deployment
+## Installation and Deployment
 
 To build you just need to run maven package ***(i.e. mvn package)*** to create artifact. It will create ***flume-http-source-customhandler-1.0-SNAPSHOT.jar*** which need to be placed in Flume installation lib directory.
 
-# Configuration
+
+## Configuration
 
 To use this you need to customise your Flume agent configuration with below configuration. 
 
@@ -23,6 +24,8 @@ To use this you need to customise your Flume agent configuration with below conf
 ```
 
 NOTE: Here "sankar" is your token based on which your event will be present. All source event should have an header field named "auth" and value "sankar".
+
+## Testing
 
 Now you can POST event like below.
 
